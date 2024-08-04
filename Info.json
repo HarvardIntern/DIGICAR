@@ -1,0 +1,10 @@
+{
+    "teams": [
+        {
+            "Name":"Eagle Evolution",
+            "Number":3322,
+            "Location":[20,2],
+            "Email":""
+        }
+    ]
+}
