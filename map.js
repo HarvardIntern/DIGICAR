@@ -5,5 +5,21 @@ L.tileLayer('https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=99446c5
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-var marker = L.marker([44, -85.2]).addTo(map);
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.");
+marker = L.marker([44, -85.2]).addTo(map).bindPopup(" hi");
+
+document.addEventListener('DOMContentLoaded', function() {
+fetch('Info.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Use the data from Info.json
+            marker = L.marker([44, -86.2]).addTo(map).bindPopup(data.a);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+    });
