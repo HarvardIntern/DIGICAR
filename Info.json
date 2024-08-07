@@ -1,10 +1,16 @@
 {
-    "a":"a",
+    "a":"abc",
     "teams": [
         {
             "name":"Eagle Evolution",
             "number":3322,
-            "location":[20,2],
+            "location":[42.305062745347804, -83.77781360462161],
+            "email":""
+        },
+        {
+            "name":"Frog Force",
+            "number":503,
+            "location":[42.463732183978756, -83.49086645809295],
             "email":""
         }
     ]
